@@ -1,4 +1,4 @@
-// let select = document.querySelector('#select');
+//let select = document.querySelector('#select');
 // let category = ['Comida','Transporte','Vivienda','Entretenimiento','Otros'];
 // select.addEventListener('focus', () => {
 //     select.innerHTML = '';

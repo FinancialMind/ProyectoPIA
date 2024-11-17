@@ -7,7 +7,6 @@
   
       // Utilizamos una consulta preparada para mayor seguridad
       $stmt = $connection->prepare("SELECT id_usuario, nombre, password, foto_perfil FROM usuarios WHERE correo = ?");
-     
       $stmt->bind_param("s", $email);
       $stmt->execute();
       $resultado = $stmt->get_result();

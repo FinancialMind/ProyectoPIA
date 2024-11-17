@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/registro/registro.css">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="fotos/icon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=B612&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css'>
     <title>Registrate</title>
 </head>
-<body>
+<body>1001
    <main>
         <a href="login.php" class="btn-regresar"><i class="fi fi-rr-angle-circle-left"></i></a>
         <div class="registro">

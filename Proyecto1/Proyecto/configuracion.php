@@ -3,8 +3,10 @@
     if(!isset($_SESSION['id_usuario'])){
         header("Location:index.php");
     }
+  // Recupera el nombre del usuario y la foto de perfil desde la sesión
     $nombre = $_SESSION['nombre'];
     require_once 'modelo/config.php';
+  // Recupera el nombre del archivo de la foto de perfil desde la sesión y construye la ruta completa
     $fotoPerfil = $_SESSION['foto_perfil']; 
     $rutaFotoPerfil = "fotos/" . $fotoPerfil;
 ?>
@@ -14,7 +16,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="css/icon.png" type="image/x-icon">-->
+    <!-- Favicon para la página -->
+    <link rel="shortcut icon" href="fotos/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/js/bootstrap.min.js">
@@ -37,20 +40,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=B612:wght@700&display=swap" rel="stylesheet">
-    <!----  -->
+
     <title>Gasto</title>
 </head>
 <body>
     <header>
+         <!-- Barra de navegación superior con enlaces a distintas secciones -->
         <nav class="navcontainer">
             <div class="logo">
                 <figure class="logo__icon">
-                    <i class="fi fi-tr-money logo__img"></i>
+                <img src="logo.png" alt="Logo" class="logo__img">
                 </figure>
                 <p class="logo__text">Control de Datos</p>
             </div>
             <span class="navcontainer__line"></span>
             <ul class="list">
+                 <!-- Menú de navegación con enlaces a diferentes secciones del sistema -->
                 <span class="list__title">Home</span>
                 <li class="list__item">
                     <a href="./inicio.php" class="list__link">
@@ -137,4 +142,5 @@
 </main>
 </body>
 </html>
+<!-- Script que maneja la visibilidad de las contraseñas al hacer clic en el checkbox "Mostrar contraseñas" -->
 <script src="./js/configuracion/showpass.js"></script>

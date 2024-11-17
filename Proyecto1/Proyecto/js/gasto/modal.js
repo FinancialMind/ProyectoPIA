@@ -1,7 +1,7 @@
-// Obtener referencias a elementos del DOM
+// Modal de agregar gasto
 var modal = document.getElementById("Modal");
 var btnAbrirModal = document.getElementById("openModalBtn");
-var spanCerrar = document.getElementsByClassName("close")[0];
+var spanCerrar = document.querySelector("#Modal .close"); // Mejor usando querySelector
 
 // Función para abrir el modal
 function abrirModal() {
@@ -16,8 +16,6 @@ function cerrarModal() {
 // Asociar eventos a las funciones
 btnAbrirModal.addEventListener("click", abrirModal);
 spanCerrar.addEventListener("click", cerrarModal);
-window.addEventListener("click", function(event) {
-  if (event.target == modal) {
-    cerrarModal();
-  }
-});
+
+// Modal de edición
+var modalEdit = document.getElementById("ModalEdit");

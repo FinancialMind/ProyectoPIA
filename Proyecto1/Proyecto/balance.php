@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="css/icon.png" type="image/x-icon">-->
+    <link rel="shortcut icon" href="fotos/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <!-- font icons -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
@@ -42,7 +42,7 @@
         <nav class="navcontainer">
             <div class="logo">
                 <figure class="logo__icon">
-                    <i class="fi fi-tr-money logo__img"></i>
+                <img src="logo.png" alt="Logo" class="logo__img">
                 </figure>
                 <p class="logo__text">Control de Datos</p>
             </div>
@@ -99,10 +99,7 @@
             <div class="information">
                 <div class="information__content">
                     <div class="select-container">
-                        <i class="fi fi-ss-calendar calendar"></i>
-                        <select class="select-container__select" id="input-select">
-                            <option selected disabled>Mes</option>
-                        </select>
+
                     </div>
                     <div class="balance">
                         <i class="fi fi-rr-chart-histogram icon-histori"></i>

@@ -38,5 +38,3 @@ Este es un sistema de Gestion de gastos e Ingresos para cualquier persona
 
 ![dashboard](./Screenshots/dashboard.png)
 
-# Proyecto1
-# Proyecto1

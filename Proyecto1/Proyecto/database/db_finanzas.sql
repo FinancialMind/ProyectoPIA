@@ -11,6 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -63,7 +64,26 @@ CREATE TABLE `gastos` (
 --
 
 INSERT INTO `gastos` (`id_gasto`, `id_usuario`, `monto`, `forma_pago`, `fecha`, `id_categoria`, `nota`) VALUES
-
+(1, 1, '23.00', 'al contado', '2023-07-11', 2, 'microbus'),
+(11, 1, '150.45', 'tarjeta de credito', '2023-07-12', 3, 'alquiler depa'),
+(12, 1, '45.00', 'paypal', '2023-07-12', 5, 'danzas'),
+(15, 1, '8.50', 'al contado', '2023-07-13', 1, 'lomo fino'),
+(16, 1, '50.00', 'cash', '2023-07-13', 5, 'me compre un intrumento de viento'),
+(17, 1, '3.00', 'cash', '2023-07-13', 5, 'ayudin para lavar'),
+(18, 1, '2.00', 'cash', '2023-07-15', 1, 'pan para la cena'),
+(19, 1, '20.30', 'paypal', '2023-07-15', 5, 'importacion de celular'),
+(20, 1, '100.00', 'paypal', '2023-07-15', 4, 'consola'),
+(23, 1, '2.00', 'cash', '2023-07-20', 1, 'galletas oreo'),
+(24, 1, '34.00', 'al contado', '2023-07-20', 4, 'play'),
+(25, 2, '80.00', 'tarjeta de credito', '2023-07-20', 5, 'cursilerias'),
+(26, 2, '230.00', 'paypal', '2023-07-20', 3, 'alquiler de habitacion'),
+(27, 10, '500.00', 'tarjeta de credito', '2023-07-22', 3, 'Alquiler de habitacion'),
+(28, 12, '1200.00', 'paypal', '2023-07-26', 5, 'compra de pencil'),
+(29, 18, '23.50', 'cash', '2023-07-28', 1, 'pan con chicharron'),
+(30, 18, '170.00', 'paypal', '2023-07-28', 5, 'teclado gamer'),
+(31, 36, '200.00', 'giro', '2023-07-29', 4, 'juegos'),
+(32, 36, '8.50', 'cash', '2023-07-29', 1, 'asado'),
+(33, 18, '4.00', 'cash', '2023-08-09', 1, 'jugo de quinua');
 
 -- --------------------------------------------------------
 
@@ -85,14 +105,21 @@ CREATE TABLE `ingresos` (
 --
 
 INSERT INTO `ingresos` (`id_ingreso`, `id_usuario`, `monto`, `forma_pago`, `fecha`, `nota`) VALUES
-(1, 1, '50.00', 'checke', '2024-07-19', 'bono por hijo de mi trabajo'),
-(2, 1, '100.000', 'giro', '2024-07-20', 'deuda de un prestamos celular'),
-(3, 1, '300.000', 'paypal', '2024-07-20', 'saldo prestado a un familiar'),
-(4, 2, '150.000', 'transferencia bancaria', '2024-07-20', 'deuda entre amigos'),
-(5, 2, '165.000', 'giro', '2024-07-20', 'subsidio de transporte'),
-(6, 1, '8.50', 'recarga', '2024-07-20', ' hicimos una recarga'),
-(7, 2, '60.000', 'al contado', '2024-07-20', 'venta de licuadora'),
+(1, 1, '20.50', 'Checke', '2023-07-19', 'bono por hijo de mi trabajo'),
+(2, 1, '1200.00', 'Giro', '2023-07-20', 'deuda de un cliente por desarrollo'),
+(3, 1, '200.00', 'Paypal', '2023-07-20', 'saldo prestado a un familiar'),
+(4, 2, '2020.00', 'Transferencia bancaria', '2023-07-20', 'deuda entre amigos'),
+(5, 2, '40.00', 'Giro', '2023-07-20', 'ingreso por recarga '),
+(6, 1, '8.50', 'Recarga', '2023-07-20', ' hicimos una recarga'),
+(7, 2, '1000.00', 'Al contado', '2023-07-20', 'venta de licuadora'),
+(8, 9, '100.00', 'Giro', '2023-07-20', 'por derechos de autor'),
+(9, 10, '10.00', 'Paypal', '2023-07-22', 'recarga a un usuario'),
+(10, 1, '120.00', 'Giro', '2023-07-26', 'venta de celular'),
+(11, 12, '23.00', 'Cash', '2023-07-26', 'entrada por recarga'),
+(12, 36, '45.00', 'Cash', '2023-07-29', 'venta pollo'),
+(13, 18, '1000.00', 'Trabajo de programacion', '2023-08-09', 'monto girado de programacion');
 
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `usuarios`
@@ -111,14 +138,21 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `correo`, `password`, `foto_perfil`) VALUES
-(1, 'laura Saavedra', 'laura@gmail.com', 'Lucas23%.com', 'usuario1.jpg'),
-(2, 'Paula', 'Paula@gmail.com', 'Paula50%.rd', 'usuario1.jpg'),
-(3, 'riko', 'riko@gmail.com', 'Rikos20@', 'usuario1.jpg'),
-(4 'carlos', 'carlitos@gmail.com', 'Carlos23@', 'usuario1.jpg'),
-(5, 'carla', 'carla@gmail.com', 'Luxor45@', 'usuario1.jpg'),
-(6, 'maximo', 'maximo23@gmail.com', 'Maximo99@', 'usuario1.jpg'),
-(7, 'rocio', 'rocio@gmail.com', 'Rocio12@', 'usuario1.jpg'),
-(8, 'margot roci', 'margot@gmail.com', 'Margot20@', 'usuario1.jpg'),
+(1, 'Andres Landinez', 'admin@gmail.com', 'Andres120@.com', 'usuario1.jpg'),
+(2, 'Lucas', 'Lucas@gmail.com', 'Lucas23%.com', 'usuario1.jpg'),
+(3, 'Riko', 'riko@gmail.com', 'Rikos20@', 'usuario1.jpg'),
+(7, 'Carlos', 'carlitos@gmail.com', 'Carlos23@', 'usuario1.jpg'),
+(8, 'Carla', 'carla@gmail.com', 'Luxor45@', 'usuario1.jpg'),
+(9, 'Maximo', 'maximo23@gmail.com', 'Maximo99@', 'usuario1.jpg'),
+(10, 'Rocio', 'rocio@gmail.com', 'Rocio12@', 'usuario1.jpg'),
+(12, 'Margot Roci', 'margot@gmail.com', 'Margot20@', 'usuario1.jpg'),
+(16, 'Test', 'test@gmail.com', 'Test23@gmail.com', 'users1690570017.jpg'),
+(18, 'Luis alberto', 'alberthumpiri@gmail.com', 'Luis23@gmail.com', 'yo.jpg'),
+(20, 'Wanda', 'wanda@gmail.com', 'wanda23D@.com', 'users1690571782.jpg'),
+(22, 'William vargas', 'william@gmail.com', 'William23@.com', 'users1690572803.jpg'),
+(28, 'Dalto', 'dalto@gmail.com', 'Dalto23@gmail.com', 'users1690586918.jpg'),
+(35, 'Sofia', 'Sofi04@gmail.com', 'Sofi0987*,', 'users1690597573.jpg'),
+(36, 'Frank', 'terter@gmail.com', 'Tester23@.com', 'users1690597575.jpg');
 
 --
 -- Índices para tablas volcadas
